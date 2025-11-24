@@ -5,7 +5,7 @@ Repositório destinado ao registro da colaboração dos estudantes de **Sistemas
 ### Objetivo ☑️:
 A atividade tem como objetivo por em prática conceitos estudados em sala, explorando o conhecimento dos estudantes no universo trabalhado (variáveis simples e compostas, listas, funções entre outros). Ademais, compor 50% da nota referente ao 2° ciclo de avaliação do semestre letivo.
 
-### Linguagem de Programção 🐍:
+### Linguagem de Programação 🐍:
 A linguagem de programação utilizada na atividade é o **Pyhton**. Python é uma linguagem de programação simples e poderosa, muito usada para criar sites, automatizar tarefas, analisar dados e desenvolver inteligência artificial. Sua sintaxe clara facilita o aprendizado, mesmo para iniciantes.
 
 ### Equipe Envolvida 🤝:
