@@ -43,7 +43,7 @@ elif opcao == "5":
     divisoria()
     print()
 elif opcao == "6":
-    print(f"\nOPÇÃO {opcao} SLECIONADA - AJUDA E DÚVIDAS❓")
+    print(f"\nOPÇÃO {opcao} SLECIONADA - AJUDA E DÚVIDAS ❓")
     divisoria()
     print()
 elif opcao == "7":
