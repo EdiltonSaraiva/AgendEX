@@ -184,32 +184,4 @@ def deletar_tarefa():
     print(f"A TEREFA REMOVIDA DO AgendEX FOI: {descricao_da_tarefa_deletada}")
     print(f"AS TAREFAS RESTANTES SÃO: {len(listar_tarefas)}")
 
-    # EXEMPLO DE USO E TESTE DA FUNÇÃO
-
-
-# Este código abaixo serve para APENAS testar a função  DE FORMA isoladamente
-# No código principal do grupo NA  BRANCH (MAIN),  não precisa deste exemplo baixo
-if __name__ == "__main__":
-
-    print("="*50)
-    print("  TESTE DA FUNÇÃO DELETAR TAREFA")
-    print("="*50)
-    print("\nCriando tarefas de exemplo para testar...")
-
-    # Cria uma lista de tarefas de exemplo
-    listar_tarefas = [
-        ["Estudar Python", "pendente"],
-        ["Fazer trabalho de matemática", "pendente"],
-        ["Revisar código do projeto", "concluída"],
-        ["Ler documentação", "pendente"]
-    ]
-
-    print(f" {len(listar_tarefas)} tarefas criadas!")
-
-    # Chama a função para testar
-    deletar_tarefa()
-
-    print("\n" + "="*50)
-    print("FIM DO TESTE")
-    print("="*50)
-
+    
