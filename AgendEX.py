@@ -2,27 +2,27 @@ def divisoria():
     print("-" * 49)
 
 
-def SairVoltar():
-    divisoria()
-    print('Deseja FECHAR O PROGRAMA ou VOLTAR AO MENU INCIAL?')
-    print('1 - VOLTAR AO MENU INICIAL.')
-    print('2 - FECHAR O PROGRAMA AGORA.')
-    divisoria()
-
-    opc = input("Digite aqui o NÚMERO da opção desejada: ")
-
-    if opc == "1":
-        MenuInicial()
-    elif opc == "2":
-        divisoria()
-        print("\nSAIU DO PROGRAMA COM SUCESSO!\nOBRIGADO POR UTILIZAR.\n😁📴\n\n")
-    else: 
-        divisoria()
-        ("A opção digitada não existe! Por favor, tente novamente.")
-
-
 def AjudaDuvidas():
-    print("\n                  ❓AJUDA E DÚVIDAS🤔                  \n")
+    def SairVoltar():
+        divisoria()
+        print('Deseja FECHAR O PROGRAMA ou VOLTAR AO MENU INCIAL?')
+        print('1 - VOLTAR AO MENU INICIAL.')
+        print('2 - FECHAR O PROGRAMA AGORA.')
+        divisoria()
+
+        opc = input("Digite aqui o NÚMERO da opção desejada: ")
+
+        if opc == "1":
+            MenuInicial()
+        elif opc == "2":
+            divisoria()
+            print("\nSAIU DO PROGRAMA COM SUCESSO!\nOBRIGADO POR UTILIZAR.\n😁📴\n\n")
+        else: 
+            divisoria()
+            ("A opção digitada não existe! Por favor, tente novamente.")
+
+
+    print("\n", " " * 18, "❓AJUDA E DÚVIDAS🤔", " " * 18 , "\n") 
     print("BEM-VINDO(A), A SESSÃO DE AJUDA E DÚVIDAS DO AGENDEX 👋!")
     print("SE VOCÊ FICOU CONFUSO COM ALGUMA DAS FUNCIONALIDADES DO\nPROGRAMA É AQUI QUE VOCÊ OBTÉM AS RESPOSTAS QUE PROCURA.")
     divisoria()
