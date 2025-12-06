@@ -114,7 +114,7 @@ if opcao == "1":
 elif opcao == "2":
     print(f"\nOPÇÃO {opcao} SELECIONADA - LISTAR TAREFAS EXISTENTES  🗃️")
     divisoria()
-    print()
+    ListarTarefa()
 elif opcao == "3":
     print(f"OPÇÃO {opcao} SELECIONADA - MARCAR TAREFA COMO CONCLUÍDA  ✅")
     divisoria()
