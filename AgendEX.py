@@ -103,7 +103,7 @@ print("6️⃣  - AJUDA E DÚVIDAS.")
 print("7️⃣  - SAIR DO SISTEMA.\n")
 
 
-TarefasAgendex = []
+
 
 opcao = (input("Por favor, digite o número da opção desejada: "))
 
