@@ -32,7 +32,7 @@ def MensagemSemTerefa():
 def RemoverTarefa():
     print("\n", " " * 18, "🗑️ REMOVER TAREFA 📄", " " * 18, "\n")
     print("BEM-VINDO(A) A SESSÃO DE REMOÇÃO DE TAREFAS DO AGENDEX 👋!")
-    print("SE VOCÊ DESJA EXCLUIR UMA TAREFA DO SEU\nAGENDEX 📒, É AQUI QUE VOCÊ FAZ ISSO!")
+    print("SE VOCÊ DESEJA EXCLUIR UMA TAREFA DO SEU\nAGENDEX 📒, É AQUI QUE VOCÊ FAZ ISSO!")
     if len(TarefasAgendex) > 0:
         divisoria()
         print(" " * 18, "SUAS TAREFAS:", " " * 18)
@@ -96,11 +96,6 @@ def RemoverTarefa():
 print("_" * 49)
 print("\n                  A-G-E-N-D-E-X                  \n")
 print("_" * 49)
-
-def divisoria():
-    print("-" * 49)
-
-
 print("___________________MENU INCIAL___________________\n")
 print("Bem-vindo(a) ao AgendEX! 📒  \nAqui você organiza suas tarefas com facilidade.\n")
 print("-Selecione uma opção abaixo:\n")
