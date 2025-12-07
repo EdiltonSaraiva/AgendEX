@@ -133,7 +133,7 @@ elif opcao == "3":
 elif opcao == "4":
     print(f"\nOPÇÃO {opcao} SELECIONADA - EDITAR TAREFA  ✏️")
     divisoria()
-
+    EditarTarefa()
 elif opcao == "5":
     print(f"\nOPÇÃO {opcao} SELECIONADA - REMOVER TAREFA  🗑️")
     divisoria()
