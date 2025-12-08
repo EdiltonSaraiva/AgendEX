@@ -70,8 +70,8 @@ print("_" * 49)
 print("\n                  A-G-E-N-D-E-X                  \n")
 print("_" * 49)
 
-def divisoria():
-    print("-" * 49)
+
+
 
 
 print("___________________MENU INCIAL___________________\n")
@@ -86,14 +86,14 @@ print("6️⃣  - AJUDA E DÚVIDAS.")
 print("7️⃣  - SAIR DO SISTEMA.\n")
 
 
-TarefasAgendex = []
+
 
 opcao = (input("Por favor, digite o número da opção desejada: "))
 
 if opcao == "1":
     print(f"\nOPÇÃO {opcao} SELECIONADA - ADICIONAR NOVA TAREFA  📝")
     divisoria()
-    print()
+
 elif opcao == "2":
     print(f"\nOPÇÃO {opcao} SELECIONADA - LISTAR TAREFAS EXISTENTES  🗃️")
     divisoria()
