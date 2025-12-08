@@ -1,5 +1,8 @@
 TarefasAgendex = []
 
+def divisoria():
+    print(" " * 49)
+
 
 def MensagemSemTarefa():
             divisoria()
