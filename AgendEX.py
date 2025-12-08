@@ -64,16 +64,9 @@ def NovaTarefa():
 
 NovaTarefa()
 
-
-
 print("_" * 49)
 print("\n                  A-G-E-N-D-E-X                  \n")
 print("_" * 49)
-
-
-
-
-
 print("___________________MENU INCIAL___________________\n")
 print("Bem-vindo(a) ao AgendEX! 📒  \nAqui você organiza suas tarefas com facilidade.\n")
 print("-Selecione uma opção abaixo:\n")
@@ -84,9 +77,6 @@ print("4️⃣  - EDITAR TAREFA.")
 print("5️⃣  - REMOVER TAREFA.")
 print("6️⃣  - AJUDA E DÚVIDAS.")
 print("7️⃣  - SAIR DO SISTEMA.\n")
-
-
-
 
 opcao = (input("Por favor, digite o número da opção desejada: "))
 
