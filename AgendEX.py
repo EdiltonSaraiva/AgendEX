@@ -1,57 +1,101 @@
 TarefasAgendex = []
 
-def divisoria():
-    print("-" * 49)
 
-def marcar_tarefa_concluida():
-    print("\nMARCAR TAREFA COMO CONCLUÍDA ✅")
-    divisoria()
+def MensagemSemTarefa():
+            divisoria()
+            print("OPA...PARECE QUE VOCÊ NÃO ADICIONOU NENHUMA TAREFA AO SEU AGENDEX 😅")
+            divisoria()
+            print("Para adicionar uma nova tarefa volte ao Menu Inicial\ne selecione a opção '1 - ADICIONAR NOVA TAREFA'.\nFazendo isso, a partir do momento que uma tarefa\nfor criada, você poderá editá-la.")
+            print("\nDESEJA VOLTAR AO MENU INICIAL?")
+            print("1 - SIM, VOLTAR.")
+            print("2 - NÃO, QUERO FECHAR O AGENDEX.")
 
-    if len(TarefasAgendex) == 0:
+            opc_sem_tarefa = input("\nDigite aqui o NÚMERO da ação desejada: ")
+
+            if opc_sem_tarefa == "1":
+                print(f" AÇÃO {opc_sem_tarefa} SELECIONADA - SIM, VOLTAR")
+                MenuInicial()
+            elif opc_sem_tarefa == "2":
+                print(f"AÇÃO SELECIONADA {opc_sem_tarefa} - NÃO, QUERO FECHAR O AGENDEX")
+                divisoria()
+                print("\nSAIU DO PROGRAMA COM SUCESSO!\nOBRIGADO POR UTILIZAR.\n😁📴\n\n")
+            else:
+                divisoria()
+                print("Ação inexistente! Tente novamente!")
+                divisoria()
+                MensagemSemTarefa()
+
+
+def MarcarConcluida():
+    print("\n", " " * 9, "📗 MARCAR TAREFA CONCLUIDA 📝", " " * 9, "\n")
+    print("BEM-VINDO(A) A SESSÃO DE MARCAR TAREFAS CONCLUÍDAS DO AGENDEX 👋!")
+    print("SE VOCÊ CONCLUIU AQUELA DEMANDA E DESEJA\nSINALIZAR, É AQUI QUE VOCÊ FAZ ISSO!")
+    if len(TarefasAgendex) > 0:
         divisoria()
-        print("OPA...PARECE QUE VOCÊ NÃO ADICIONOU NENHUMA TAREFA AO SEU AGENDEX 😅")
+        print(" " * 18, "SUAS TAREFAS:", " " * 18)
+        for indice_tarefa, tarefa in enumerate(TarefasAgendex, start = 1):
+                print(f"{indice_tarefa} - {tarefa.upper()}")
         divisoria()
-        print("Para marcar uma tarefa como concluída, primeiro adicione uma tarefa no menu inicial (opção 1).")
-        return
-    else:
-        print("\nLISTA DE TAREFAS:")
-        for i, tarefa in enumerate(TarefasAgendex, start=1):
-            status = "✔ Concluída" if tarefa.get("concluida") else "⏳ Pendente"
-            print(f"{i}. {tarefa['descricao']} — {status}")
+
+        indice_usuario = 0
 
         try:
-            indice = int(input("\nDigite o número da tarefa que deseja marcar como concluída: ")) - 1
-
-            if 0 <= indice < len(TarefasAgendex):
-                if not TarefasAgendex[indice]["concluida"]:
-                    TarefasAgendex[indice]["concluida"] = True
-                    print("\nTarefa marcada como concluída com sucesso! ✔\n")
-                else:
-                    print("\nEsta tarefa já está marcada como concluída.\n")
-            else:
-                print("\nNúmero inválido! Nenhuma tarefa alterada.\n")
-
+            indice_usuario = int(input("Digite aqui o NÚMERO da tarefa que você já concluiu: "))
+            divisoria()
+            print(f"VOCÊ CONCLUIU A TAREFA DE NÚMERO {indice_usuario} - '{TarefasAgendex[indice_usuario - 1]}'")
         except ValueError:
-            print("\nEntrada inválida! Digite apenas números.\n")
-
-        print("\nDESEJA VOLTAR AO MENU INICIAL?")
-        print("1 - SIM, VOLTAR.")
-        print("2 - NÃO, QUERO FECHAR O AGENDEX.")
-
-        opc_sem_tarefa = input("\nDigite aqui o NÚMERO da ação desejada: ")
-
-        if opc_sem_tarefa == "1":
-            print(f"AÇÃO {opc_sem_tarefa} SELECIONADA - SIM, VOLTAR")
-            MenuInicial()
-        elif opc_sem_tarefa == "2":
-            print(f"AÇÃO SELECIONADA {opc_sem_tarefa} - NÃO, QUERO FECHAR O AGENDEX")
             divisoria()
-            print("\nSAIU DO PROGRAMA COM SUCESSO!\nOBRIGADO POR UTILIZAR.\n😁📴\n\n")
-            exit()
+            print("Por favor, digite apenas números! Tente novamente!")
+            divisoria()
+            MarcarConcluida()
+        except IndexError:
+            divisoria()
+            print("A tarefa que você tentou concluir, não existe! Tente novamente!")
+            divisoria()
+            MarcarConcluida()
         else:
-            divisoria()
-            print("Ação inexistente! Tente novamente!")
-            divisoria()
+            if " - CONCLUÍDA ✔️" in TarefasAgendex[indice_usuario - 1]:
+                divisoria()
+                print("A tarefa selecionada já foi concluída! Tente outra!")
+                divisoria()
+                MarcarConcluida()
+            else:
+                indice_tarefa = indice_usuario - 1
+
+                TarefasAgendex[indice_tarefa] = TarefasAgendex[indice_tarefa] + " - CONCLUÍDA ✔️"
+                divisoria()
+                print("\nTAREFA CONCLUÍDA COM SUCESSO ✅!\n")
+                for indice_tarefa, tarefa in enumerate(TarefasAgendex, start = 1):
+                    print(f"{indice_tarefa} - {tarefa.upper()}")
+
+            def ConcluirMais():
+                print("\nVocê ainda deseja concluir alguma tarefa?")
+                print("1 - SIM, CONCLUIR MAIS.")
+                print("2 - NÃO, VOLTAR AO MENU INICIAL.")
+
+                opc = input("Digite o NÚMERO da ação que deseja realizar: ")
+
+                if opc == "1":
+                    divisoria()
+                    print(f"AÇÃO {opc} SELECIONADA - CONCLUIR MAIS")
+                    MarcarConcluida()
+                elif opc == "2":
+                    divisoria()
+                    print(f"AÇÃO {opc} SELECIONADA - VOLTAR AO MENU INICIAL")
+                    ManuInicial()
+                else:
+                    divisoria()
+                    print("A ação digitada não existe! Por favor, tente novamente!")
+                    divisoria()
+                    ConcluirMais()
+
+
+        ConcluirMais()
+
+    else:
+        MensagemSemTarefa()
+
+
 
 
 print("_" * 49)
@@ -86,7 +130,7 @@ elif opcao == "3":
 elif opcao == "4":
     print(f"\nOPÇÃO {opcao} SELECIONADA - EDITAR TAREFA  ✏️")
     divisoria()
-    print()
+    MarcarConcluida()
 elif opcao == "5":
     print(f"\nOPÇÃO {opcao} SELECIONADA - REMOVER TAREFA  🗑️")
     divisoria()
