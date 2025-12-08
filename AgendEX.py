@@ -93,7 +93,7 @@ opcao = (input("Por favor, digite o número da opção desejada: "))
 if opcao == "1":
     print(f"\nOPÇÃO {opcao} SELECIONADA - ADICIONAR NOVA TAREFA  📝")
     divisoria()
-
+    NovaTarefa()
 elif opcao == "2":
     print(f"\nOPÇÃO {opcao} SELECIONADA - LISTAR TAREFAS EXISTENTES  🗃️")
     divisoria()
