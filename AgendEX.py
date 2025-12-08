@@ -1,3 +1,71 @@
+TarefasAgendex = []
+
+def divisoria():
+    print("-" * 49)
+
+
+def NovaTarefa():
+    def ContinuarAdicionando():
+        print("\nDeseja adicionar uma nova tarefa ou voltar ao menu inicial?")
+        print("1 - ADICIONAR.")
+        print("2 - VOLTAR AO MENU INICIAL.")
+
+        continuar_adicionando = input("Digite aqui o NÚMERO da ação que deseja: ")
+
+        if continuar_adicionando == "1":
+            divisoria()
+            print(f"\nAÇÃO {continuar_adicionando} SELECIONADA - ADICIONAR")
+            divisoria()
+            TarefasAgendex.append(input("Descreva sua nova tarefa: "))
+            divisoria()
+            print("SUA TAREFA FOI ADICIONADA COM SUCESSO✅!")
+            ContinuarAdicionando()
+        elif continuar_adicionando == "2":
+            divisoria()
+            print(f"\nAÇÃO {continuar_adicionando} SELECIONADA - VOLTAR AO MENU INICIAL")
+            divisoria()
+            
+        else:
+            divisoria()
+            print("Opção digitada não existe! Tente Novamente!")
+            divisoria()
+            ContinuarAdicionando()
+
+
+    print("\n"," " * 18 ,"📝 ADICIONAR NOVA TAREFA 🆕", 18 * " ", "\n")
+    print("BEM-VINDO(A), A SESSÃO DE ADICIONAR TAREFAS DO AGENDEX 👋!")
+    print("É AQUI QUE VOCÊ FAZ A MAGIA ACONTECER! ADICIONE UMA\nTAREFA A SUA LISTA PARA SE MANTER ORGANIZADO(A).")
+    divisoria()
+    print("POR FAVOR, PARA PROSSEGUIR, CONFIRME SUA AÇÃO:")
+    print("1 - ADICIONAR NOVA TAREFA AO AGENDEX📒.")
+    print("2 - VOLTAR AO MENU INICIAL.")
+
+    opc = input("\nDigite aqui o NÚMERO da ação desejada: ")
+
+    if opc == "1":
+        print(f"\nAÇÃO {opc} SELECIONADA - ADICIONAR NOVA TAREFA AO AGENDEX")
+        divisoria()
+        TarefasAgendex.append(input("Descreva sua nova tarefa: "))
+        divisoria()
+        print("SUA TAREFA FOI ADICIONADA COM SUCESSO✅!")
+        divisoria()
+        print("PARA VER SUAS TAREFAS, VOLTE AO MENU\nINICIAL E SELECIONE A OPÇÃO\n'2 - LISTAR TAREFAS EXISTENTES'")
+        divisoria()
+        ContinuarAdicionando()
+    elif opc == "2":
+        print(f"\nAÇÃO {opc} SLECIONADA - VOLTAR AO MENU INICIAL")
+        divisoria()
+        MenuInicial()
+    else: 
+        divisoria()
+        print("Opção digitada não existe! Tente Novamente!")
+        
+
+
+NovaTarefa()
+
+
+
 print("_" * 49)
 print("\n                  A-G-E-N-D-E-X                  \n")
 print("_" * 49)
