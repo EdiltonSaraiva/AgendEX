@@ -96,9 +96,8 @@ def MarcarConcluida():
         ConcluirMais()
 
     else:
+        
         MensagemSemTarefa()
-
-
 
 
 print("_" * 49)
