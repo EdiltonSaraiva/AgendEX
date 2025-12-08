@@ -24,7 +24,7 @@ def NovaTarefa():
             divisoria()
             print(f"\nAÇÃO {continuar_adicionando} SELECIONADA - VOLTAR AO MENU INICIAL")
             divisoria()
-            
+            MenuInicial()  
         else:
             divisoria()
             print("Opção digitada não existe! Tente Novamente!")
