@@ -25,27 +25,27 @@ def MenuInicial():
     if opcao == "1":
         print(f"\nOPÇÃO {opcao} SELECIONADA - ADICIONAR NOVA TAREFA  📝")
         divisoria()
-        print()
+        NovaTarefa()
     elif opcao == "2":
         print(f"\nOPÇÃO {opcao} SELECIONADA - LISTAR TAREFAS EXISTENTES  🗃️")
         divisoria()
-        print()
+        ListarTarefas()
     elif opcao == "3":
         print(f"OPÇÃO {opcao} SELECIONADA - MARCAR TAREFA COMO CONCLUÍDA  ✅")
         divisoria()
-        print()
+        MarcarConcluida()
     elif opcao == "4":
         print(f"\nOPÇÃO {opcao} SELECIONADA - EDITAR TAREFA  ✏️")
         divisoria()
-        print()
+        EditarTarefa()
     elif opcao == "5":
         print(f"\nOPÇÃO {opcao} SELECIONADA - REMOVER TAREFA  🗑️")
         divisoria()
-        print()
+        RemoverTarefa()
     elif opcao == "6":
         print(f"\nOPÇÃO {opcao} SLECIONADA - AJUDA E DÚVIDAS ❓")
         divisoria()
-        print()
+        AjudaDuvidas()
     elif opcao == "7":
         print(f"\nOPÇÃO {opcao} SELECIONADA - SAIR DO SISTEMA")
         divisoria()
