@@ -3,6 +3,55 @@ TarefasAgendex = []
 def divisoria():
     print("-" * 49)
 
+def MenuInicial():
+    print("___________________MENU INCIAL___________________\n")
+    print("Bem-vindo(a) ao AgendEX! 📒  \nAqui você organiza suas tarefas com facilidade.\n")
+    print("-Selecione uma opção abaixo:\n")
+    print("1️⃣  - ADICIONAR NOVA TAREFA.")
+    print("2️⃣  - LISTAR TAREFAS EXISTENTES.")
+    print("3️⃣  - MARCAR TAREFA COMO CONCLUÍDA.")
+    print("4️⃣  - EDITAR TAREFA.")
+    print("5️⃣  - REMOVER TAREFA.")
+    print("6️⃣  - AJUDA E DÚVIDAS.")
+    print("7️⃣  - SAIR DO SISTEMA.\n")
+
+
+    TarefasAgendex = []
+
+    opcao = (input("Por favor, digite o número da opção desejada: "))
+
+    if opcao == "1":
+        print(f"\nOPÇÃO {opcao} SELECIONADA - ADICIONAR NOVA TAREFA  📝")
+        divisoria()
+        NovaTarefa()
+    elif opcao == "2":
+        print(f"\nOPÇÃO {opcao} SELECIONADA - LISTAR TAREFAS EXISTENTES  🗃️")
+        divisoria()
+        ListarTarefas()
+    elif opcao == "3":
+        print(f"OPÇÃO {opcao} SELECIONADA - MARCAR TAREFA COMO CONCLUÍDA  ✅")
+        divisoria()
+        MarcarConcluida()
+    elif opcao == "4":
+        print(f"\nOPÇÃO {opcao} SELECIONADA - EDITAR TAREFA  ✏️")
+        divisoria()
+        EditarTarefa()
+    elif opcao == "5":
+        print(f"\nOPÇÃO {opcao} SELECIONADA - REMOVER TAREFA  🗑️")
+        divisoria()
+        RemoverTarefa()
+    elif opcao == "6":
+        print(f"\nOPÇÃO {opcao} SLECIONADA - AJUDA E DÚVIDAS ❓")
+        divisoria()
+        AjudaDuvidas()
+    elif opcao == "7":
+        print(f"\nOPÇÃO {opcao} SELECIONADA - SAIR DO SISTEMA")
+        divisoria()
+        print("\nSAIU DO PROGRAMA COM SUCESSO!\nOBRIGADO POR UTILIZAR.\n😁📴\n\n")
+    else:
+        divisoria()
+        print("\nERRO! OPÇÃO DIGITADA NÃO EXISTE ❌\n\n")
+
 
 def NovaTarefa():
     def ContinuarAdicionando():
@@ -61,50 +110,25 @@ def NovaTarefa():
         print("Opção digitada não existe! Tente Novamente!")
         
 
-print("_" * 49)
-print("\n                  A-G-E-N-D-E-X                  \n")
-print("_" * 49)
-print("___________________MENU INCIAL___________________\n")
 print("Bem-vindo(a) ao AgendEX! 📒  \nAqui você organiza suas tarefas com facilidade.\n")
-print("-Selecione uma opção abaixo:\n")
-print("1️⃣  - ADICIONAR NOVA TAREFA.")
-print("2️⃣  - LISTAR TAREFAS EXISTENTES.")
-print("3️⃣  - MARCAR TAREFA COMO CONCLUÍDA.")
-print("4️⃣  - EDITAR TAREFA.")
-print("5️⃣  - REMOVER TAREFA.")
-print("6️⃣  - AJUDA E DÚVIDAS.")
-print("7️⃣  - SAIR DO SISTEMA.\n")
+print("\nCONFIRME PARA ENTRAR NO AGENDEX 📒")
+print("1 - CONFIRMAR")
+print("2 - SAIR")
 
-opcao = (input("Por favor, digite o número da opção desejada: "))
+while True:
+    opcao_inicio = input("Digite o NÚMERO da ação que deseja executar: ")
 
-if opcao == "1":
-    print(f"\nOPÇÃO {opcao} SELECIONADA - ADICIONAR NOVA TAREFA  📝")
-    divisoria()
-    NovaTarefa()
-elif opcao == "2":
-    print(f"\nOPÇÃO {opcao} SELECIONADA - LISTAR TAREFAS EXISTENTES  🗃️")
-    divisoria()
-    print()
-elif opcao == "3":
-    print(f"OPÇÃO {opcao} SELECIONADA - MARCAR TAREFA COMO CONCLUÍDA  ✅")
-    divisoria()
-    print()
-elif opcao == "4":
-    print(f"\nOPÇÃO {opcao} SELECIONADA - EDITAR TAREFA  ✏️")
-    divisoria()
-    print()
-elif opcao == "5":
-    print(f"\nOPÇÃO {opcao} SELECIONADA - REMOVER TAREFA  🗑️")
-    divisoria()
-    print()
-elif opcao == "6":
-    print(f"\nOPÇÃO {opcao} SLECIONADA - AJUDA E DÚVIDAS ❓")
-    divisoria()
-    print()
-elif opcao == "7":
-    print(f"\nOPÇÃO {opcao} SELECIONADA - SAIR DO SISTEMA")
-    divisoria()
-    print("\nSAIU DO PROGRAMA COM SUCESSO!\nOBRIGADO POR UTILIZAR.\n😁📴\n\n")
-else:
-    divisoria()
-    print("\nERRO! OPÇÃO DIGITADA NÃO EXISTE ❌\n\n")
+    if opcao_inicio == "1":
+        divisoria()
+        print(f"AÇÃO {opcao_inicio} SELECIONADA - CONFIRMAR")
+        divisoria()
+        MenuInicial()
+    elif opcao_inicio == "2":
+        divisoria()
+        print(f"AÇÃO {opcao_inicio} SELECIONADA - SAIR")
+        divisoria()
+        break
+    else:
+        divisoria()
+        print("A ação digitada não existe! Tente novamente!")
+        divisoria()
