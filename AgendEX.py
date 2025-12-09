@@ -246,7 +246,7 @@ def RemoverTarefa():
                     divisoria()
                     print(f"AÇÃO {opc} SELECIONADA - CONTINUAR EXCLUINDO")
                     divisoria()
-                    RemoverTarefa()
+                    ContinuarRemovendo()
                 else:
                     divisoria()
                     print("A ação digitada não existe! Por favor, tente novamente!")
@@ -296,10 +296,12 @@ def RemoverTarefa():
                 divisoria()
                 print("PARA VER SUAS TAREFAS, VOLTE AO MENU\nINICIAL E SELECIONE A OPÇÃO\n'2 - LISTAR TAREFAS EXISTENTES'")
                 divisoria()
-                ContinuarRemovendo()
+                RemoverTarefa()
             elif confirmar_exclusao == "2":
                 divisoria()
                 print(f"AÇÃO {confirmar_exclusao} - VOLTAR AO MENU INICIAL")
+                divisoria()
+                MenuInicial()
             else:
                 divisoria()
                 print("Ação digitada não existe! Tente novamente!")
@@ -331,12 +333,12 @@ def AjudaDuvidas():
             AjudaDuvidas()
         elif opc == "3":
             divisoria()
-            print("\nSAIU DO PROGRAMA COM SUCESSO!\nOBRIGADO POR UTILIZAR.\n😁📴\n\n")
+            MensagemDeSaida()
         else: 
             divisoria()
             ("A opção digitada não existe! Por favor, tente novamente.")
             divisoria()
-    print("\n                  ❓AJUDA E DÚVIDAS🤔                  \n")
+    print("\n", " " * 9, "❓AJUDA E DÚVIDAS🤔", 9 * " ", "\n")
     print("BEM-VINDO(A), A SESSÃO DE AJUDA E DÚVIDAS DO AGENDEX 👋!")
     print("SE VOCÊ FICOU CONFUSO COM ALGUMA DAS FUNCIONALIDADES DO\nPROGRAMA É AQUI QUE VOCÊ OBTÉM AS RESPOSTAS QUE PROCURA.")
     divisoria()
@@ -393,7 +395,7 @@ def AjudaDuvidas():
         print("Sim! Você pode excluir tarefas, para isso, siga os seguintes passos:") 
         print("-No Menu Inicial, digite a opção '5 - REMOVER TAREFA';")
         print("-Após selecionada a opção, caso haja tarefas criadas, uma mensagem de selecionar tarefa será apresentada;")
-        print("-Em seguida, você deve confirmar a exlcusão no menu, com a opção '1 - SIM, DESEJO EXLUIR';")
+        print("-Em seguida, você deve confirmar a exlcusão no menu, com a opção '1 - CONFIRMAR REMOÇÃO';")
         print("-Caso você não tenha nenhuma tarefa para ser exlcuída, uma mensagem notificando será exibida.")
         print('Esperamos ter atendido suas dúvidas!\n')
         SairVoltar()
@@ -499,8 +501,8 @@ def ListarTarefa():
 
 
 def MenuInicial():
-    print("___________________MENU INCIAL___________________\n")
-    print("Bem-vindo(a) ao AgendEX! 📒  \nAqui você organiza suas tarefas com facilidade.\n")
+    print(" " * 18, "MENU INCIAL", 18 * " ")
+    print("Este é o menu inicial do AgendEX! 📒  \nAqui você acessa as principais funcionalidades do programa.\n")
     print("-Selecione uma opção abaixo:\n")
     print("1️⃣  - ADICIONAR NOVA TAREFA.")
     print("2️⃣  - LISTAR TAREFAS EXISTENTES.")
@@ -540,10 +542,12 @@ def MenuInicial():
     elif opcao == "7":
         print(f"\nOPÇÃO {opcao} SELECIONADA - SAIR DO SISTEMA")
         divisoria()
-        print("\nSAIU DO PROGRAMA COM SUCESSO!\nOBRIGADO POR UTILIZAR.\n😁📴\n\n")
+        MensagemDeSaida()
     else:
         divisoria()
         print("\nERRO! OPÇÃO DIGITADA NÃO EXISTE ❌\n\n")
+        MenuInicial()
+
 
 divisoria()
 print(" " * 18, "A-G-E-N-D-E-X", 18 * " ")
