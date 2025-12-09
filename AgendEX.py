@@ -1,7 +1,75 @@
 TarefasAgendex = []
 
 def divisoria():
-    print("-" * 49)
+    print(" " * 49)
+
+
+def MensagemSemTarefa():
+            divisoria()
+            print("OPA...PARECE QUE VOCÊ NÃO ADICIONOU NENHUMA TAREFA AO SEU AGENDEX 😅")
+            divisoria()
+            print("Para adicionar uma nova tarefa volte ao Menu Inicial\ne selecione a opção '1 - ADICIONAR NOVA TAREFA'.\nFazendo isso, a partir do momento que uma tarefa\nfor criada, você poderá editá-la.")
+            print("\nDESEJA VOLTAR AO MENU INICIAL?")
+            print("1 - SIM, VOLTAR.")
+            print("2 - NÃO, QUERO FECHAR O AGENDEX.")
+
+            opc_sem_tarefa = input("\nDigite aqui o NÚMERO da ação desejada: ")
+
+            if opc_sem_tarefa == "1":
+                print(f" AÇÃO {opc_sem_tarefa} SELECIONADA - SIM, VOLTAR")
+                MenuInicial()
+            elif opc_sem_tarefa == "2":
+                print(f"AÇÃO SELECIONADA {opc_sem_tarefa} - NÃO, QUERO FECHAR O AGENDEX")
+                divisoria()
+                print("\nSAIU DO PROGRAMA COM SUCESSO!\nOBRIGADO POR UTILIZAR.\n😁📴\n\n")
+            else:
+                divisoria()
+                print("Ação inexistente! Tente novamente!")
+                divisoria()
+                MensagemSemTarefa()
+
+
+def MarcarConcluida():
+    print("\n", " " * 9, "📗 MARCAR TAREFA CONCLUIDA 📝", " " * 9, "\n")
+    print("BEM-VINDO(A) A SESSÃO DE MARCAR TAREFAS CONCLUÍDAS DO AGENDEX 👋!")
+    print("SE VOCÊ CONCLUIU AQUELA DEMANDA E DESEJA\nSINALIZAR, É AQUI QUE VOCÊ FAZ ISSO!")
+    if len(TarefasAgendex) > 0:
+        divisoria()
+        print(" " * 18, "SUAS TAREFAS:", " " * 18)
+        for indice_tarefa, tarefa in enumerate(TarefasAgendex, start = 1):
+                print(f"{indice_tarefa} - {tarefa.upper()}")
+        divisoria()
+
+        indice_usuario = 0
+
+        try:
+            indice_usuario = int(input("Digite aqui o NÚMERO da tarefa que você já concluiu: "))
+            divisoria()
+            print(f"VOCÊ CONCLUIU A TAREFA DE NÚMERO {indice_usuario} - '{TarefasAgendex[indice_usuario - 1]}'")
+        except ValueError:
+            divisoria()
+            print("Por favor, digite apenas números! Tente novamente!")
+            divisoria()
+            MarcarConcluida()
+        except IndexError:
+            divisoria()
+            print("A tarefa que você tentou concluir, não existe! Tente novamente!")
+            divisoria()
+            MarcarConcluida()
+        else:
+            if " - CONCLUÍDA ✔️" in TarefasAgendex[indice_usuario - 1]:
+                divisoria()
+                print("A tarefa selecionada já foi concluída! Tente outra!")
+                divisoria()
+                MarcarConcluida()
+            else:
+                indice_tarefa = indice_usuario - 1
+
+                TarefasAgendex[indice_tarefa] = TarefasAgendex[indice_tarefa] + " - CONCLUÍDA ✔️"
+                divisoria()
+                print("\nTAREFA CONCLUÍDA COM SUCESSO ✅!\n")
+                for indice_tarefa, tarefa in enumerate(TarefasAgendex, start = 1):
+                    print(f"{indice_tarefa} - {tarefa.upper()}")
 
 def MenuInicial():
     print("___________________MENU INCIAL___________________\n")
@@ -15,8 +83,6 @@ def MenuInicial():
     print("6️⃣  - AJUDA E DÚVIDAS.")
     print("7️⃣  - SAIR DO SISTEMA.\n")
 
-
-    TarefasAgendex = []
 
     opcao = (input("Por favor, digite o número da opção desejada: "))
 
