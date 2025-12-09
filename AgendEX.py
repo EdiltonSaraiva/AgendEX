@@ -53,3 +53,27 @@ def MenuInicial():
     else:
         divisoria()
         print("\nERRO! OPÇÃO DIGITADA NÃO EXISTE ❌\n\n")
+
+
+print("Bem-vindo(a) ao AgendEX! 📒  \nAqui você organiza suas tarefas com facilidade.\n")
+print("\nCONFIRME PARA ENTRAR NO AGENDEX 📒")
+print("1 - CONFIRMAR")
+print("2 - SAIR")
+
+while True:
+    opcao_inicio = input("Digite o NÚMERO da ação que deseja executar: ")
+
+    if opcao_inicio == "1":
+        divisoria()
+        print(f"AÇÃO {opcao_inicio} SELECIONADA - CONFIRMAR")
+        divisoria()
+        MenuInicial()
+    elif opcao_inicio == "2":
+        divisoria()
+        print(f"AÇÃO {opcao_inicio} SELECIONADA - SAIR")
+        divisoria()
+        break
+    else:
+        divisoria()
+        print("A ação digitada não existe! Tente novamente!")
+        divisoria()
