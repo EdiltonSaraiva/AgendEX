@@ -33,6 +33,6 @@ INTEGRANTES:
 3. Edilton Saraiva Lopes;
 4. Jamerson Garcês do Vale;
 5. José Guilherme Batista Costa;
-6. Pedro Juan Cazabonne Oliveira de Monroe;
+6. Ytalo Emanuel Sanches Mondego
 
 ![AgendEXtheme](https://github.com/user-attachments/assets/e7a77d34-22b6-4c27-a92e-195c03f89ec8)
