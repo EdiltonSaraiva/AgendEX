@@ -6,6 +6,7 @@ def divisoria():
 
 def MensagemDeSaida():
     print("\nSAIU DO PROGRAMA COM SUCESSO!\nOBRIGADO POR UTILIZAR.\n😁📴\n\n")
+    exit()
 
 
 def MensagemSemTarefa():
