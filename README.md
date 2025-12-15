@@ -14,7 +14,7 @@ Primeiramente, certifique-se de ter o Python Istalado na sua máquina (Versão 3
 Python 3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
 ```
-Adiante, para obter o AgendEX na sua computador, é necessário clonar esse repositório em sua máquina. Para isso, no seu terminal execute o seguite comando:
+Adiante, para obter o AgendEX no seu computador, é necessário clonar esse repositório em sua máquina. Para isso, no seu terminal execute o seguite comando:
 ```
 git clone https://github.com/EdiltonSaraiva/AgendEX.git
 ```
